@@ -1,16 +1,34 @@
-# stringcalculator
+# 🧮 String Calculator TDD
 
-A new Flutter project.
+This project is a solution to the **Test Driven Development (TDD)** . The task was to implement a `StringCalculator` using strict TDD practices.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✅ Features Implemented
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Returns `0` for empty input
+- ✅ Returns the number for a single input (e.g., `"5"` → `5`)
+- ✅ Handles comma-separated numbers (e.g., `"1,2"` → `3`)
+- ✅ Handles newlines as delimiters (e.g., `"1\n2,3"` → `6`)
+- ✅ Supports custom single-character delimiters (e.g., `"//;\n1;2"` → `3`)
+- ✅ Throws exception for negative numbers and lists them (e.g., `"1,-2"` → `Negatives not allowed: [-2]`)
+- ✅ Ignores numbers greater than 1000 (e.g., `"2,1001"` → `2`)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧪 TDD Approach
+
+This solution strictly follows the **Red ➝ Green ➝ Refactor** loop:
+- 🟥 Write failing tests first
+- 🟩 Write minimal code to pass the test
+- 🧹 Refactor to improve code quality
+
+Each commit in this repository represents one step in the TDD cycle.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter 
+
