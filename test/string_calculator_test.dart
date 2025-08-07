@@ -15,4 +15,8 @@ void main() {
   test('returns sum of two numbers', () {
     expect(calculator.add('1,2'), 3);
   });
+
+  test('handles newlines as delimiters', () {
+    expect(calculator.add('1\n2,3'), 6);
+  });
 }
