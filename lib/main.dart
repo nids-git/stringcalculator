@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'StringCalculator.dart';
 
 void main() {
-
+  final calculator = StringCalculator();
+  final result = calculator.add('//[**][%%]\n1%%2**3');
+  print('Final Result: $result');
   //runApp(const MyApp());
 }
 

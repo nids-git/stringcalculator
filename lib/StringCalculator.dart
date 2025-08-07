@@ -29,6 +29,6 @@ class StringCalculator {
       throw ArgumentError('Negatives not allowed: $negatives');
     }
 
-    return numberList.where((n) => n <= 1000).reduce((a, b) => a + b);
+    return numberList.where((n) => n <= 1000).fold(0, (sum, n) => sum + n);
   }
 }

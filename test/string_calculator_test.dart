@@ -38,4 +38,15 @@ void main() {
           e.message == 'Negatives not allowed: [-2, -4]')),
     );
   });
+
+  test('should ignore numbers greater than 1000', () {
+    final calculator = StringCalculator();
+    expect(calculator.add('2,1001,6'), 8);
+    expect(calculator.add('1000,1'), 1001); // 1000 should be included
+  });
+
+
+
+
+
 }
