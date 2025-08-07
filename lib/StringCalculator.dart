@@ -1,5 +1,4 @@
-
-class StringCalculator{
+class StringCalculator {
   int add(String numbers) {
     if (numbers.trim().isEmpty) return 0;
 
@@ -24,6 +23,11 @@ class StringCalculator{
         .split(RegExp(delimiterPattern))
         .map((e) => int.parse(e))
         .toList();
+
+    final negatives = numberList.where((n) => n < 0).toList();
+    if (negatives.isNotEmpty) {
+      throw ArgumentError('Negatives not allowed: $negatives');
+    }
 
     return numberList.where((n) => n <= 1000).reduce((a, b) => a + b);
   }

@@ -28,4 +28,14 @@ void main() {
     final calculator = StringCalculator();
     expect(calculator.add('//[***][%]\n1***2%3'), 6);
   });
+
+  test('should throw exception for negative numbers', () {
+    final calculator = StringCalculator();
+    expect(
+          () => calculator.add('1,-2,3,-4'),
+      throwsA(predicate((e) =>
+      e is ArgumentError &&
+          e.message == 'Negatives not allowed: [-2, -4]')),
+    );
+  });
 }
